@@ -2,11 +2,119 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Кэт энерджи</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="page-header">
+      <a class="page-header__logo" href="/">
+        <img class="page-header__logo-image" src="img/" width="" height="" alt="">
+      </a>
+      <b class="page-header__title">Cat Energy</b>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
+            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="main-index"> <!--Нужен другой класс. Этот не подходит-->
+        <h1 class="main-index__title">Функцинальное питание для котов</h1>
+        <p class="main-index__description">Занялся собой? Займись котом!</p>
+        <img class="main-index__image" src="img/" width="" height="" alt="">
+        <button class="main-index__toggle" type="button">Подобрать программу</button>
+      </section>
+      <section class="programs">
+        <ul class="programs__list">
+          <li class="programs__item programs__item--slim">
+            <h3 class="programs__title">Похудение</h3>
+            <p class="programs__description">Ваш кот весит больше собаки и почти утратил
+              способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему
+              питомцу сбросить лишний вес</p>
+            <a class="programs__link" href="/">Каталог Slim</a>
+          </li>
+          <li class="program__item programs__item--weight">
+            <h3 class="programs__title">Набор массы</h3>
+            <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
+              Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="programs__link" href="/">Каталог Pro</a>
+          </li>
+        </ul>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title">Как это работает</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--usefully">Функциональное питание содержит
+            только полезные питательные вещества.</li>
+          <li class="advantages__item advantages__item--simply">Выпускается в виде порошка, который
+            нужно лишь залить кипятком и готово.
+          </li>
+          <li class="advantages__item advantages__item--lunch">Замените один-два приема обычной еды
+            на наше функциональное питание.</li>
+          <li class="advantages__item advantages__item--result">Уже через месяц наслаждайтесь
+            изменениями к лучшему у вашего питомца!</li>
+        </ul>
+      </section>
+      <section class="example">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив
+          свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+          При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <!--Этот блок доверстать-->
+        <div class="example__wrapper">
+          <p class="">5 кг
+            <small class="example__legend example__legend--bottom">снижение веса</small>
+          </p>
+          <p class="">60 дней
+            <small class="example__legend example__legend--bottom">затрачено времени</small>
+          </p>
+        </div>
+        <!--Конец блока-->
+        <ul class="example__list slider__list">
+          <li class="example__item slider__item"><img src="img/"></li>
+          <li class="example__item slider__item"><img src="img/"></li>
+        </ul>
+        <!--В блоке с переключателем еще должен быть сам переключатель-->
+        <p class="example__toggles slider__toggles">
+          <button class="slider__toggle" type="button">Было</button>
+          <button class="slider__toggle" type="button">Стало</button>
+        </p>
+      </section>
+      <!--Карта с текстовым блоком на светлом фоне.Доверстать светлый фон-->
+      <section class="adress">
+        <h3 class="adress__title">Приглашаем к сотрудничеству!</h3>
+        <p class="adress__description">ул. Большая Конюшенная, д. 19/8<br>
+          Санкт-Петербург
+        </p>
+        <img class="adress__map" src="img/">
+      </section>
+      <!--Конец блока-->
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <b class="page-footer__title">Cat Energy</b>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
