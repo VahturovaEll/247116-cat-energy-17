@@ -6,10 +6,10 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="/">
-        <img class="page-header__logo-image" src="img/" width="" height="" alt="">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
+        <img class="page-header__logo-title" src="img/logo-mobile-header.svg" width="100" height="18" alt="Cat Energy">
       </a>
-      <b class="page-header__title">Cat Energy</b>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
@@ -22,11 +22,11 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="main-index"> <!--Нужен другой класс. Этот не подходит-->
-        <h1 class="main-index__title">Функцинальное питание для котов</h1>
-        <p class="main-index__description">Занялся собой? Займись котом!</p>
-        <img class="main-index__image" src="img/" width="" height="" alt="">
-        <button class="main-index__toggle" type="button">Подобрать программу</button>
+      <section class="promo">
+        <h2 class="promo__title">Функцинальное питание для котов</h2>
+        <p class="promo__description">Занялся собой? Займись котом!</p>
+        <img class="promo__image" src="img/" width="" height="" alt="">
+        <a class="promo__toggle" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <ul class="programs__list">
@@ -35,13 +35,13 @@
             <p class="programs__description">Ваш кот весит больше собаки и почти утратил
               способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему
               питомцу сбросить лишний вес</p>
-            <a class="programs__link" href="/">Каталог Slim</a>
+            <a class="programs__link" href="#">Каталог Slim</a>
           </li>
-          <li class="program__item programs__item--weight">
+          <li class="programs__item programs__item--weight">
             <h3 class="programs__title">Набор массы</h3>
             <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
               Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="programs__link" href="/">Каталог Pro</a>
+            <a class="programs__link" href="#">Каталог Pro</a>
           </li>
         </ul>
       </section>
@@ -74,45 +74,49 @@
           </p>
         </div>
         <!--Конец блока-->
-        <ul class="example__list slider__list">
-          <li class="example__item slider__item"><img src="img/"></li>
-          <li class="example__item slider__item"><img src="img/"></li>
-        </ul>
-        <!--В блоке с переключателем еще должен быть сам переключатель-->
-        <p class="example__toggles slider__toggles">
-          <button class="slider__toggle" type="button">Было</button>
-          <button class="slider__toggle" type="button">Стало</button>
-        </p>
+        <div class="example__wrapper slider">
+          <ul class="example__list slider__list">
+            <li class="example__item slider__item"><img src="img/"></li>
+            <li class="example__item slider__item"><img src="img/"></li>
+          </ul>
+          <!--В блоке с переключателем еще должен быть сам переключатель-->
+          <p class="example__toggles slider__toggles">
+            <button class="slider__toggle" type="button">Было</button>
+            <button class="slider__toggle" type="button">Стало</button>
+          </p>
+        </div>
       </section>
-      <!--Карта с текстовым блоком на светлом фоне.Доверстать светлый фон-->
-      <section class="adress">
-        <h3 class="adress__title">Приглашаем к сотрудничеству!</h3>
-        <p class="adress__description">ул. Большая Конюшенная, д. 19/8<br>
-          Санкт-Петербург
-        </p>
-        <img class="adress__map" src="img/">
+      <section class="address">
+        <div class="address__wrapper--light">
+          <b class="address__title">Приглашаем к сотрудничеству!</b>
+          <p class="address__description">ул. Большая Конюшенная, д. 19/8<br>
+            Санкт-Петербург
+          </p>
+        </div>
+        <img class="address__map" src="img/"><!--Тут будет интерактивная карта-->
       </section>
-      <!--Конец блока-->
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <b class="page-footer__title">Cat Energy</b>
+        <img class="page-footer__title-img" src="img/footer-logo.svg" width="128" height="25" alt="Cat Energy">
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social__link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__link-img" src="img/htmlacademy.svg" width="27"  height="34" alt="HTML Academy">
+          </a>
         </div>
       </div>
     </footer>
