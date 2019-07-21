@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
   background-color: @base-color;
@@ -8,41 +18,15 @@ body {
   color: #444444;
 }
 
-h1 {
-  font-size: @title-font;
-  line-height: 36px;
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: @title-font;
-  line-height: 60px;
-  margin: 0;
-  padding: 0;
-}
-
-h3 {
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-li {
-  list-style: none;
+.visually-hidden {
+  display: block;
 }

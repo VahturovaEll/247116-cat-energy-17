@@ -1,23 +1,27 @@
-.programs {
-  margin: 0 20px;
+.programs__list {
+  .list-reset();
 }
 
 .programs__item {
   background-color: @additional-color;
-  margin: 20px 0;
-  padding: 0 20px;
+  padding: 22px 20px;
+  margin: 0 0 20px;
 }
 
 .programs__title {
+  margin: 0;
   font-size: 24px;
-  font-weight: 37px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
   color: #000000;
-  padding: 20px 0;
+  padding: 7px 0 7px 70px;
 }
 
 .programs__description {
   font-family: "Arial", sans-serif;
-  padding: 20px 0;
+  margin: 0 0 23px;
+  padding: 0 0 23px;
   border-bottom: 1px solid @border-color;
 }
 
@@ -26,5 +30,5 @@
   font-size: 16px;
   line-height: 16px;
   color: #000000;
-  padding: 20px 0 25px;
+  text-transform: uppercase;
 }

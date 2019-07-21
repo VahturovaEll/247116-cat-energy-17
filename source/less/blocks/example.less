@@ -1,15 +1,19 @@
 .example {
   background-color: @additional-color;
-  padding: 0 20px;
 }
 
 .example__title {
-  padding: 35px 0 10px;
+  margin: 0;
+  padding: 35px 0;
+  font-size: @title-font;
+  line-height: 60px;
+  font-weight: 400;
 }
 
 .example__description {
+  margin: 0;
   font-family: "Arial", sans-serif;
-  padding: 25px 0;
+  padding: 0 0 25px;
 }
 
 .example__legend {
@@ -18,6 +22,17 @@
   line-height: 12px;
 }
 
+.example__outlay {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+}
+
 .example__item {
-  list-style: none;
+  .list-reset();
+}
+
+.example__toggles {
+  margin: 0;
 }
