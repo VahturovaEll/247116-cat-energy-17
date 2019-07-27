@@ -17,3 +17,32 @@
   width: 100%;
   padding: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-list__item {
+    border: 0;
+  }
+
+  .site-list__item:nth-child(1) {
+    border-top: 0;
+  }
+
+  .site-list__item a {
+    padding: 9px 15px;
+  }
+
+  .site-list__item a:last-child {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item a {
+    color: @base-color;
+  }
+}

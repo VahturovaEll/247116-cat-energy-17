@@ -16,7 +16,7 @@
 }
 
 .promo__description {
-  margin: 0 auto;
+  margin: 0;
   padding: 0 0 30px;
   line-height: 14px;
   color: @base-color;
@@ -26,4 +26,65 @@
 
 .promo__image {
   padding: 0 0 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background-image: none;
+    padding: 0 0 30px;
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .promo .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+    padding-bottom: 50px;
+    width: 430px;
+  }
+
+  .promo__description {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    padding-bottom: 50px;
+  }
+
+  .promo__image:nth-child(3) {
+    order: 1;
+    z-index: -1;
+    margin: -80px 0 0 70px;
+  }
+
+  .promo .button {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .promo .container {
+    margin-left: 0;
+    padding-left: 190px;
+    padding-top: 200px;
+  }
+
+  .promo__image:nth-child(3) {
+    z-index: 0;
+    margin: -300px 0 0 450px;
+  }
 }

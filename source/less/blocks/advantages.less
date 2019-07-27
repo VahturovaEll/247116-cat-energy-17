@@ -19,3 +19,31 @@
   padding: 7px 0 7px 80px;
   margin: 0 0 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages__title {
+    font-size: 60px;
+  }
+
+  .advantages__item {
+    padding: 150px 50px 100px 0;
+    width: 300px;
+    height: 300px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    padding: 75px 50px 50px 0;
+    width: 245px;
+    height: 230px;
+  }
+}

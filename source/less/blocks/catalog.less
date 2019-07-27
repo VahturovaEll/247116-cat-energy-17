@@ -1,3 +1,39 @@
 .catalog__list {
   .list-reset();
 }
+
+@media (min-width: @tablet-width) {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .catalog__list--goods {
+    flex-direction: column;
+  }
+
+  .catalog__item-wrapp {
+    padding: 40px;
+    position: relative;
+    background: none;
+  }
+
+  .catalog__item-wrapp::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: @additional-color;
+    z-index: -1;
+  }
+
+  .catalog__item-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -21,10 +21,25 @@
   display: block;
   width: 100%;
   margin: 22px 0 0;
-  padding: 15px 0;
+  padding: 13px 0;
   background-color: @additional-color;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-all {
+    padding: 25px 30px;
+  }
+
+  .catalog-all__veiw {
+    font-size: 20px;
+    padding: 240px 0 10px;
+  }
+
+  .catalog-all__legend {
+    font-size: 16px;
+  }
 }
