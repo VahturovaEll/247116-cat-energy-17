@@ -9,15 +9,15 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-img" src="../img/icons/logo-mobile.svg" width="190" height="40" alt="Cat Energy">
+        <img class="page-header__logo-img" src="img/icons/logo-mobile.svg" width="190" height="40" alt="Cat Energy">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Закрыть меню</button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
+            <li class="site-list__item"><a href="index.html">Главная</a></li>
             <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+            <li class="site-list__item site-list__item--active""><a>Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -27,30 +27,71 @@
       <section class="form">
         <form method="post" action="https://echo.htmlacademy.ru">
           <fieldset>
-            <p><label for="name">Имя:*</label><input type="text" id="name" name="Имя кота" placeholder="Барсик" required></p>
-            <p><label for="weight">Вес (кг):*</label><input type="text" id="weight" name="Вес кота, кг" placeholder="7" required></p>
-            <p><label for="age">Возраст (лет):</label><input type="text" id="age" name="Возраст кота, лет" placeholder="7"></p>
+            <ul>
+              <li>
+                <label for="name">Имя:*</label>
+                <input type="text" id="name" name="Имя кота" placeholder="Барсик" required>
+              </li>
+              <li>
+                <label for="weight">Вес (кг):*</label>
+                <input type="text" id="weight" name="Вес кота, кг" placeholder="7" required>
+              </li>
+              <li>
+                <label for="age">Возраст (лет):</label>
+                <input type="text" id="age" name="Возраст кота, лет" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
-            <p><label><input type="radio" name="Program" value="Похудение" checked>Похудение</label></p>
-            <p><label><input type="radio" name="Program" value="Набор массы">Набор массы</label></p>
-            <p><label><input type="radio" name="Program" value="Не знаю">Не знаю (нужен ваш совет)</label></p>
+            <ul>
+              <li>
+                <label><input type="radio" name="Program" value="Похудение" checked>Похудение</label>
+              </li>
+              <li>
+                <label><input type="radio" name="Program" value="Набор массы">Набор массы</label>
+              </li>
+              <li>
+                <label><input type="radio" name="Program" value="Не знаю">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Контактные данные (владельца кота)</legend>
-            <p><label for="email">E-mail:<em>*</em></label><input type="email" id="email" name="email" value="" placeholder="Kuklachev@gmail.com" required></p>
-            <p><label for="tel">Телефон: <em>*</em></label><input type="tel" id="tel" name="tel" value="" placeholder="8(960)900-60-90" required></p>
+            <ul>
+              <li>
+                <label for="email">E-mail:<em>*</em></label>
+                <input type="email" id="email" name="email" value="" placeholder="Kuklachev@gmail.com" required>
+              </li>
+              <li>
+                <label for="tel">Телефон: <em>*</em></label>
+                <input type="tel" id="tel" name="tel" value="" placeholder="8(960)900-60-90" required>
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Комментарий</legend>
-                <textarea type="text"  name="Комментарий" rows="8" wrap>Расскажите обо всех повадках своего кота</textarea>
+            <textarea type="text"  name="Комментарий" rows="8" wrap>Расскажите обо всех повадках своего кота</textarea>
           </fieldset>
           <fieldset>
             <legend>Дополнительно:</legend>
-            <p><input type="checkbox" id="no-sugar" name="Additionally" value="Сахарозаменитель" checked><label for="no-sugar">Сахарозаменитель</label></p>
-            <p><input type="checkbox" id="water" name="Additionally" value="Питьевая вода"><label for="water">Питьевая вода</label></p>
-            <p><input type="checkbox" id="milk" name="Additionally" value="Молоко"><label for="milk">Молоко</label></p>
-            <p><input type="checkbox" id="vitamins" name="Additionally" value="Витамины"><label for="vitamins">Витамины</label></p>
+            <ul>
+              <li>
+                <input type="checkbox" id="no-sugar" name="Additionally" value="Сахарозаменитель" checked>
+                <label for="no-sugar">Сахарозаменитель</label>
+              </li>
+              <li>
+                <input type="checkbox" id="water" name="Additionally" value="Питьевая вода">
+                <label for="water">Питьевая вода</label>
+              </li>
+              <li>
+                <input type="checkbox" id="milk" name="Additionally" value="Молоко">
+                <label for="milk">Молоко</label>
+              </li>
+              <li>
+                <input type="checkbox" id="vitamins" name="Additionally" value="Витамины">
+                <label for="vitamins">Витамины</label>
+              </li>
+            </ul>
           </fieldset>
           <p><button type="submit">Отправить заявку</button></p>
           <span>*-Обязательные поля</span>
@@ -63,12 +104,14 @@
             Санкт-Петербург
           </p>
         </div>
-        <img class="address__map" src="../img/bg-map-mobile@1x.png"><!--Тут будет интерактивная карта-->
+        <img class="address__map" src="img/bg-map-mobile@1x.png"><!--Тут будет интерактивная карта-->
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
-        <img class="page-footer__title-img" src="../img/icons/logo-footer.svg" width="128" height="25" alt="Cat Energy">
+        <a class="page-footer__logo" href="index.html">
+          <img class="page-footer__title-img" src="img/icons/logo-footer.svg" width="128" height="25" alt="Cat Energy">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -97,7 +140,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__link-img" src="../img/icons/htmlacademy.svg" width="27"  height="34" alt="HTML Academy">
+            <img class="copyright__link-img" src="img/icons/htmlacademy.svg" width="27"  height="34" alt="HTML Academy">
           </a>
         </div>
       </div>

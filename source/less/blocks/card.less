@@ -1,5 +1,5 @@
 .card {
-  padding: 25px 20px;
+  padding: 21px 20px;
   border-top: 1px solid @border-color;
   border-bottom: 1px solid @border-color;
 }
@@ -14,11 +14,12 @@
 
 .card__title {
   margin: 0;
-  padding: 0 0 20px;
+  padding: 0 0 10px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .card__descrition {
@@ -37,8 +38,14 @@
 
 @media (min-width: @tablet-width) {
   .card {
+    width: 325px;
     border: 0;
-    padding: 25px 30px;
+    padding: 0;
+    margin-right: 58px;
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 0;
   }
 
   .card__wrapper-all {
@@ -59,7 +66,19 @@
 
 @media (min-width: @desktop-width) {
   .card {
+    width: 245px;
+    border: 0;
+    padding: 0;
+    margin: 0 80px 0 0;
     flex-direction: row;
     display: flex;
+  }
+
+  .card:nth-child(2n) {
+    margin-right: 80px;
+  }
+
+  .card:nth-child(4n) {
+    margin-right: 0;
   }
 }

@@ -1,4 +1,8 @@
-.adding__goods-title {
+.adding-goods__list {
+  .list-reset();
+}
+
+.adding-goods__title {
   margin: 0;
   font-size: 24px;
   line-height: 24px;
@@ -6,19 +10,11 @@
   padding: 30px 0;
 }
 
-.adding__goods-title-small {
-  margin: 0;
-  padding: 13px 0 18px;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
-}
-
-.adding__action {
+.adding-action {
   padding: 20px 0;
 }
 
-.adding__action-description {
+.adding-action__description {
   margin: 0;
   background-color: @button-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -33,11 +29,19 @@
 }
 
 @media (min-width: @tablet-width) {
-  .adding__goods-title {
+  .adding-goods__title {
     font-size: 36px;
   }
 
-  .adding__action-description {
+  .adding-action__description {
     font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .adding-goods__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

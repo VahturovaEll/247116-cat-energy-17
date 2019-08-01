@@ -4,7 +4,7 @@
 
 .example__title {
   margin: 0;
-  padding: 35px 0;
+  padding: 16px 0 24px;
   font-size: @title-font;
   line-height: 60px;
   font-weight: 400;
@@ -16,12 +16,13 @@
   padding: 0 0 25px;
 }
 
-.example__wrapper {
+.example__statistics {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.example__wrapper p {
+.example__statistics p {
   font-size: 24px;
   line-height: 24px;
   flex-direction: column;
@@ -74,7 +75,7 @@
   }
 
   .example__title {
-    padding: 50px 0 75px;
+    padding: 45px 0 62px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -88,7 +89,12 @@
     display: flex;
   }
 
-  .example__wrapper p {
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .example__statistics p {
     font-size: 30px;
     line-height: 37px;
   }
