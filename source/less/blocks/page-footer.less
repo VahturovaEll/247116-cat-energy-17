@@ -3,13 +3,27 @@
 }
 
 .page-footer__title-img {
-  padding: 40px 0 30px;
+  padding: 37px 0 31px;
+  display: block;
+  margin: 0 auto;
 }
 
 .page-footer__social {
-  padding: 20px 0;
+  padding: 24px 0 15px;
+  border-top: 1px solid @border-color;
+  border-bottom: 1px solid @border-color;
 }
 
 .page-footer__copyright {
-  padding: 20px 0;
+  padding: 21px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

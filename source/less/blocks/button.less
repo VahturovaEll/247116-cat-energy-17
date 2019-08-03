@@ -3,7 +3,15 @@
   width: 100%;
   background-color: @button-color;
   color: @base-color;
-  padding: 15px 0;
+  padding: 11px 0;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

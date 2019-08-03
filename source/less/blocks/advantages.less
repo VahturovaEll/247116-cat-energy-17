@@ -1,10 +1,10 @@
 .advantages {
-  padding: 0 0 30px;
+  padding-bottom: 30px;
 }
 
 .advantages__title {
   margin: 0;
-  padding: 15px 0 10px;
+  padding-bottom: 20px;
   font-size: @title-font;
   line-height: 60px;
   font-weight: 400;
@@ -16,6 +16,102 @@
 
 .advantages__item {
   font-family: "Arial", sans-serif;
-  padding: 7px 0 7px 80px;
-  margin: 0 0 20px;
+  padding: 10px 0 10px 80px;
+  margin-bottom: 6px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    top: 8px;
+    left: 0;
+    position: absolute;
+    background-color: @button-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--lunch::before {
+    background-image: url("../img/advantage-dining@1x.png");
+    background-size: 58px 49px;
+  }
+
+  &--simply::before {
+    background-image: url("../img/advantage-powder@1x.png");
+    background-size: 50px 53px;
+  }
+
+  &--usefully::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-size: 51px 52px;
+  }
+
+  &--result::before {
+    background-image: url("../img/advantage-clock@1x.png");
+    background-size: 50px 50px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding-bottom: 7px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    padding: 32px 0;
+  }
+
+  .advantages__item {
+    padding: 125px 0 0 0;
+    width: 250px;
+    height: 250px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 140px 30px 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .advantages__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__title {
+    padding: 43px 0 35px;
+  }
+
+  .advantages__item {
+    padding: 125px 0 0 0;
+    width: 245px;
+    height: 250px;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 80px 30px 0;
+  }
+
+  .advantages__item:nth-child(2n) {
+    margin-right: 80px;
+  }
+
+  .advantages__item:nth-child(4n) {
+    margin-right: 0;
+  }
 }

@@ -4,3 +4,29 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
+.main-nav__toggle {
+  position: absolute;
+  top: 18px;
+  right: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;/*
+    padding-right: 35px;*/
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

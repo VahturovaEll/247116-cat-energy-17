@@ -17,3 +17,28 @@
   width: 100%;
   padding: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-list__item {
+    border: 0;
+  }
+
+  .site-list__item:nth-child(1) {
+    border-top: 0;
+  }
+
+  .site-list__item a {
+    padding: 9px 36px 9px 0;
+    margin-right: 36px;
+  }
+
+  .site-list__item:last-child a {
+    padding-right: 0;
+    margin-right: 0;
+  }
+}

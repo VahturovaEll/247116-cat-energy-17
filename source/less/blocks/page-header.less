@@ -1,8 +1,30 @@
 .page-header {
   margin: 0 auto;
   padding: 15px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__logo {
   padding: 0 20px;
+  height: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 34px 30px;
+  }
+
+  .page-header__logo {
+    display: flex;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    padding: 65px 110px;
+  }
 }
