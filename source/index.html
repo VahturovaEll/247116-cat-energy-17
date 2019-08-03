@@ -7,7 +7,14 @@
     <title>Кэт энерджи</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header"><!--
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/icon/logo-desktop@svg" width="202">
+          <source media="(min-width: 768px)" srcset="img/icon/logo-tablet@svg" width="173">
+          <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy" width="190" height="40">
+        </picture>
+      </a>-->
       <a class="page-header__logo" href="index.html">
         <img class="page-header__logo-img" src="img/icons/logo-mobile.svg" width="190" height="40" alt="Cat Energy">
       </a>
@@ -28,10 +35,10 @@
           <div class="promo__wrapper">
             <h1 class="promo__title">Функциональное питание для котов</h1>
             <p class="promo__description">Занялся собой? Займись котом!</p>
-            <picture class="promo__image">
-              <source media="(min-width: 1300px)" alt="Функциональное питание для котов" srcset="img/index-can-desktop@1x.png">
-              <source media="(min-width: 768px)" alt="Функциональное питание для котов" srcset="img/index-can-tablet@1x.jpg">
-              <img src="img/index-can-mobile@1x.png" alt="Функциональное питание для котов" style="width:auto;" width="280" height="270">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png" width="552">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg" width="708">
+              <img src="img/index-can-mobile@1x.png" class="promo__image" alt="Функциональное питание для котов" width="280" height="270">
             </picture>
             <a class="button" href="form.html">Подобрать программу</a>
           </div>
@@ -103,7 +110,7 @@
         </div>
       </section>
       <section class="address">
-        <div class="address__wrapper address__wrapper--light">
+        <div class="address__wrapper">
           <b class="address__title">Приглашаем<br> к сотрудничеству дилеров!</b>
           <p class="address__description">ул. Большая Конюшенная, д. 19/8<br>
             Санкт-Петербург
@@ -146,7 +153,7 @@
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img class="copyright__link-img" src="img/icons/htmlacademy.svg" width="27"  height="34" alt="HTML Academy">
+              <img class="copyright__link-img" src="img/icons/htmlacademy.svg" width="27"  height="34" alt="HTML Academy"><!--поменять на svg в сл задании, когда обновится графика-->
             </a>
           </div>
         </div>
