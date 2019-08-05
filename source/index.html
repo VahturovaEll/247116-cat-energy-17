@@ -7,24 +7,25 @@
     <title>Кэт энерджи</title>
   </head>
   <body>
-    <header class="page-header"><!--
-      <a class="page-header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/icon/logo-desktop@svg" width="202">
-          <source media="(min-width: 768px)" srcset="img/icon/logo-tablet@svg" width="173">
-          <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy" width="190" height="40">
-        </picture>
-      </a>-->
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-img" src="img/icons/logo-mobile.svg" width="190" height="40" alt="Cat Energy">
-      </a>
+    <header class="page-header page-header--opened page-header--nojs">
+      <div class="page-header__top">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+            <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy" width="191" height="40">
+          </picture>
+        </a>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+        <button class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--nojs" type="button" aria-label="Открыть меню">
+          <span></span>
+        </button>
+        <div class="main-nav__wrapper main-nav__wrapper--opened main-nav__wrapper--nojs">
+          <ul class="main-nav__list site-list site-list--main">
+            <li class="site-list__item site-list__item--active"><a class="site-list__item-link">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__item-link" href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item"><a class="site-list__item-link" href="form.html">Подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -42,7 +43,7 @@
             </picture>
             <a class="button" href="form.html">Подобрать программу</a>
           </div>
-        <div>
+        </div>
       </section>
       <section class="programs">
         <div class="container">
