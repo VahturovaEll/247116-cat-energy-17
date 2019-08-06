@@ -4,31 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Кэт энерджи</title>
+    <title>Cat Energy</title>
   </head>
   <body>
-    <header class="page-header page-header--opened page-header--nojs">
-      <div class="page-header__top">
-        <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/icons/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
-            <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy" width="191" height="40">
-          </picture>
-        </a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--opened main-nav__toggle--nojs" type="button" aria-label="Открыть меню">
-          <span></span>
-        </button>
-        <div class="main-nav__wrapper main-nav__wrapper--opened main-nav__wrapper--nojs">
-          <ul class="main-nav__list site-list site-list--main">
-            <li class="site-list__item site-list__item--active"><a class="site-list__item-link">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__item-link" href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a class="site-list__item-link" href="form.html">Подбор программы</a></li>
-          </ul>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__wrapper">
+          <div class="page-header__top">
+            <a class="page-header__logo" href="index.html">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/icons/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+                <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy">
+              </picture>
+            </a>
+          </div>
+          <nav class="main-nav main-nav--nojs">
+            <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+              <span class="main-nav__toggle-line"></span>
+            </button>
+            <ul class="main-nav__list site-list site-list--main">
+              <li class="site-list__item"><a class="site-list__item-link site-list__item-link--active">Главная</a></li>
+              <li class="site-list__item"><a class="site-list__item-link" href="catalog.html">Каталог продукции</a></li>
+              <li class="site-list__item"><a class="site-list__item-link" href="form.html">Подбор программы</a></li>
+            </ul>
+          </nav>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="page-main">
       <section class="promo">
@@ -160,5 +162,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
