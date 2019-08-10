@@ -81,7 +81,8 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-image: url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(#63a73a, #63a73a 305px);
     background-size: 50%;
     background-position: top right;
     background-repeat: no-repeat;
@@ -101,10 +102,7 @@
 
   .promo__image-wrapper {
     z-index: 1;
-  }
-
-  .promo__image {
-    margin: -366px 0 0 370px;
+    margin: -366px 0 0 152px;
   }
 
   .promo__description {
@@ -113,5 +111,6 @@
 
   .promo .button {
     margin-left: 0;
+    z-index: 1;
   }
 }
