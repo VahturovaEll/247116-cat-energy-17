@@ -1,5 +1,5 @@
 .social {
-  padding: 23px 83px 14px 73px;
+  padding: 23px 0 14px 0;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .social__item {
@@ -24,7 +26,7 @@
     color: #68b738;
   }
 
-  &:focus {
+  &:active {
     color: #c8e0ba;
   }
 }
@@ -33,10 +35,33 @@
   .social {
     border-top: 0;
     border-bottom: 0;
-    padding: 0 0 0 30px;
+    padding: 12px 0 0;
   }
 
   .social__item {
-    padding: 0 20px;
+    padding: 0 15px;
+  }
+
+  .social__link {
+    &--vk svg {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    padding: 9px 0 0;
   }
 }
