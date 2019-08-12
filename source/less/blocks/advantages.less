@@ -35,26 +35,23 @@
     background-color: @button-color;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 50px 50px;
   }
 
   &--lunch::before {
     background-image: url("../img/advantage-dining@1x.png");
-    background-size: 58px 49px;
   }
 
   &--simply::before {
     background-image: url("../img/advantage-powder@1x.png");
-    background-size: 50px 53px;
   }
 
   &--usefully::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-size: 51px 52px;
   }
 
   &--result::before {
     background-image: url("../img/advantage-clock@1x.png");
-    background-size: 50px 50px;
   }
 }
 
@@ -70,21 +67,22 @@
   .advantages__list {
     display: flex;
     flex-flow: row wrap;
-    justify-content: start;
+    counter-reset: num;
+    padding-bottom: 29px;
   }
 
   .advantages__title {
     font-size: 60px;
-    padding: 32px 0;
+    padding: 28px 0 72px;
   }
 
   .advantages__item {
-    padding: 125px 0 0 0;
+    padding: 112px 0 0 0;
     width: 250px;
     height: 250px;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 140px 30px 0;
+    margin: 0 134px 67px 0;
 
     &::before {
       content: "";
@@ -94,6 +92,24 @@
       top: 0;
       left: 0;
     }
+
+    &::after {
+      content: counter(num);
+      counter-increment: num;
+      position: absolute;
+      top: -40px;
+      left: 113px;
+      z-index: -1;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 282px;
+      line-height: 281px;
+      font-weight: 400;
+      color: @additional-color;
+    }
+  }
+
+  .advantages__item--usefulle {
+    margin-bottom: 67px;
   }
 
   .advantages__item:nth-child(2n) {
@@ -103,16 +119,20 @@
 
 @media (min-width: @desktop-width) {
   .advantages__title {
-    padding: 43px 0 35px;
+    padding: 44px 0 71px;
+  }
+
+  .advantages__list {
+    padding-bottom: 0;
   }
 
   .advantages__item {
-    padding: 125px 0 0 0;
+    padding: 112px 0 0 0;
     width: 245px;
     height: 250px;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 80px 30px 0;
+    margin: 0 80px 10px 0;
   }
 
   .advantages__item:nth-child(2n) {

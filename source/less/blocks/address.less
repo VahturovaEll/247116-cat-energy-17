@@ -28,8 +28,31 @@
 }
 
 @media (min-width: @desktop-width) {
-  .adress__wrapper {
-    padding: 0 40px;
+  .address {
+    position: relative;
+  }
+
+  .address__wrapper {
+    position: absolute;
+    top: 98px;
+    left: 110px;
+    width: 570px;
+    height: 200px;
+    z-index: 1;
     background-color: @base-color;
+    padding: 66px 76px 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .address__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 13px;
+  }
+
+  .address__description {
+    font-size: 16px;
+    width: 169px;
   }
 }
