@@ -1,33 +1,37 @@
 .card {
-  padding: 21px 20px;
+  padding: 0 20px 21px;
   border-top: 1px solid @border-color;
-  border-bottom: 1px solid @border-color;
 }
-
+/*
 .card--mod {
   padding: 15px 0;
 }
-
-.card__wrapper-all {
-  display: flex;
+*/
+.card__img {
+  width: 140px;
+  height: 144px;
 }
 
 .card__title {
-  margin: 0;
-  padding: 0 0 10px;
+  max-width: 80px;
+  margin: 21px 0 11px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .card__descrition {
-  padding: 0 0 24px;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .card .button {
@@ -41,26 +45,64 @@
     width: 325px;
     border: 0;
     padding: 0;
-    margin-right: 58px;
+    margin-bottom: 40px;
+    background: linear-gradient(to top, #f2f2f2 432px, #ffffff 432px);
   }
 
-  .card:nth-child(2n) {
-    margin-right: 0;
-  }
-
-  .card__wrapper-all {
-    flex-direction: column;
-    align-items: center;
+  .card__img {
+    width: 164px;
+    height: 173px;
   }
 
   .card__title {
+    font-size: 20px;/*
+    padding: 20px 40px 20px;*/
+    width: 135px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .card__title-link {
     font-size: 20px;
-    padding: 20px 40px 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #111111;
+    text-transform: uppercase;
   }
 
   .card__descrition {
-    padding: 0 0 40px;
+    padding: 0 40px 40px;
     font-size: 16px;
+  }
+
+  .card__descrition tr {
+    margin-top: 7px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  .card__field {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #444444;
+    text-transform: none;
+    margin-right: auto;
+  }
+
+  .card__value {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #444444;
+    text-transform: none;
+  }
+
+  .card .button {
+    width: 250px;
+    margin: 0 auto;
   }
 }
 

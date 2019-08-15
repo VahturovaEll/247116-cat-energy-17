@@ -1,5 +1,5 @@
 .advantages {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .advantages__wrapper {
@@ -8,7 +8,7 @@
 
 .advantages__title {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 28px;
   font-size: @title-font;
   line-height: 60px;
   font-weight: 400;
@@ -20,16 +20,18 @@
 
 .advantages__item {
   font-family: "Arial", sans-serif;
-  padding: 10px 0 10px 80px;
-  margin-bottom: 6px;
+  padding-left: 80px;
+  margin-bottom: 20px;
   position: relative;
+  min-height: 60px;
+  padding-top: 2px;
 
   &::before {
     content: "";
     display: block;
     width: 60px;
     height: 60px;
-    top: 8px;
+    top: 0;
     left: 0;
     position: absolute;
     background-color: @button-color;
@@ -57,7 +59,7 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    padding-bottom: 7px;
+    padding-bottom: 57px;
   }
 
   .advantages__wrapper {
@@ -68,7 +70,7 @@
     display: flex;
     flex-flow: row wrap;
     counter-reset: num;
-    padding-bottom: 29px;
+    justify-content: space-between;
   }
 
   .advantages__title {
@@ -77,12 +79,12 @@
   }
 
   .advantages__item {
-    padding: 112px 0 0 0;
-    width: 250px;
-    height: 250px;
+    padding: 112px 70px 0 0;
+    width: 325px;
+    min-height: 228px;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 134px 67px 0;
+    margin-bottom: 90px;
 
     &::before {
       content: "";
@@ -108,12 +110,8 @@
     }
   }
 
-  .advantages__item--usefulle {
-    margin-bottom: 67px;
-  }
-
-  .advantages__item:nth-child(2n) {
-    margin-right: 0;
+  .advantages__item:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -124,22 +122,13 @@
 
   .advantages__list {
     padding-bottom: 0;
+    justify-content: space-between;
   }
 
   .advantages__item {
     padding: 112px 0 0 0;
-    width: 245px;
-    height: 250px;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 80px 10px 0;
-  }
-
-  .advantages__item:nth-child(2n) {
-    margin-right: 80px;
-  }
-
-  .advantages__item:nth-child(4n) {
-    margin-right: 0;
+    margin: 0;
   }
 }
