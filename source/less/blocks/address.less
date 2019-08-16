@@ -20,16 +20,31 @@
   line-height: 20px;
 }
 
+.addres__map {
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+
 @media (min-width: @tablet-width) {
   .adress__wrapper {
     padding: 0 30px;
     background-color: @additional-color;
+  }
+
+  .addres__map {
+    background-image: url("../img/bg-map-tablet@1x.png");
   }
 }
 
 @media (min-width: @desktop-width) {
   .address {
     position: relative;
+  }
+
+  .addres__map {
+    background-image: url("../img/bg-map-desktop@1x.png");
   }
 
   .address__wrapper {

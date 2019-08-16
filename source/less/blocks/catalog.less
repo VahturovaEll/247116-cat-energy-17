@@ -1,10 +1,16 @@
-.catalog__list {
-  .list-reset();
-}
-
 .catalog__item-wrapp {
   display: flex;
   flex-direction: row;
+}
+
+.catalog__item-wrapp--all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog__list {
+  .list-reset();
 }
 
 @media (min-width: @tablet-width) {
@@ -15,7 +21,6 @@
   .catalog__item-wrapp {
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to top, #f2f2f2 432px, #ffffff 432px);
   }
 
   .catalog__list {

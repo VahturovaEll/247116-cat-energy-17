@@ -1,126 +1,205 @@
 .card {
-  padding: 0 20px 21px;
+  padding: 0 20px 24px;
   border-top: 1px solid @border-color;
 }
-/*
-.card--mod {
-  padding: 15px 0;
+
+.card:nth-last-child(1) {
+  border-bottom: 1px solid @border-color;
 }
-*/
+
+.card__link {
+  width: 140px;
+  height: 144px;
+  flex-shrink: 0;
+}
+
 .card__img {
   width: 140px;
   height: 144px;
 }
 
-.card__title {
-  max-width: 80px;
-  margin: 21px 0 11px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: left;
+.card__descrition {
+  width: 100%;
+  padding: 21px 0 19px;
 }
 
-.card__descrition {
+.card__table {
+  width: 100%;
+  border-collapse: collapse;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }
 
-.card .button {
-  padding: 13px 0;
+
+.card__title-link {
+  text-align: left;
+}
+
+.card__title {
+  margin: 0 0 10px;
+  padding-right: 60px;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.card__title--all {
+  margin: 0;
+  padding: 80px 0 8px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 87px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icons/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.card__legend {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.card__value {
+  text-align: right;
+}
+
+.card__button {
+  padding: 10px 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card__button--all {
+  margin: 22px 0 0;
+  background-color: @additional-color;
+  color: #444444;
+
+  &:active {
+    background-color: #ebebeb;
+    color: #c3c3c3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .card {
     width: 325px;
     border: 0;
-    padding: 0;
-    margin-bottom: 40px;
-    background: linear-gradient(to top, #f2f2f2 432px, #ffffff 432px);
+    padding: 0 0 40px;
+    margin-bottom: 140px;
+    background: #f2f2f2;
+  }
+
+  .card:nth-child(odd) .card__link {
+    margin-top: -46px;
+  }
+
+  .card:nth-child(even) .card__link {
+    margin-top: -82px;
+  }
+
+  .card:nth-last-child(1) {
+    border: 1px solid #d9d9d9;
+    background-color: #ffffff;
   }
 
   .card__img {
-    width: 164px;
-    height: 173px;
-  }
-
-  .card__title {
-    font-size: 20px;/*
-    padding: 20px 40px 20px;*/
-    width: 135px;
-    margin-top: 36px;
-    margin-bottom: 16px;
-    align-self: center;
-    text-align: center;
-  }
-
-  .card__title-link {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #111111;
-    text-transform: uppercase;
+    width: 100%;
+    height: auto;
   }
 
   .card__descrition {
-    padding: 0 40px 40px;
+    padding: 33px 40px 35px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    padding: 0 50px;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  .card__title--all {
+    font-size: 20px;
+    padding: 161px 90px 5px;
+
+    &::before {
+      top: 52px;
+      left: 133px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .card__legend {
+    font-size: 16px;
+    padding: 0 50px 82px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  .card__table {
     font-size: 16px;
   }
 
-  .card__descrition tr {
-    margin-top: 7px;
-    padding-bottom: 6px;
+  .card__table tr {
     border-bottom: 1px solid #cdcdcd;
   }
 
-  .card__field {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #444444;
-    text-transform: none;
-    margin-right: auto;
+  .card__table td {
+    padding: 7px 0;
   }
 
-  .card__value {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #444444;
-    text-transform: none;
+  .card__link {
+    width: 100%;
+    height: auto;
   }
 
-  .card .button {
+  .card__button {
     width: 250px;
     margin: 0 auto;
+    padding: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .card {
     width: 245px;
-    border: 0;
-    padding: 0;
-    margin: 0 80px 0 0;
-    flex-direction: row;
-    display: flex;
   }
 
-  .card:nth-child(2n) {
-    margin-right: 80px;
+  .card__title {
+    padding: 0 5px;
   }
 
-  .card:nth-child(4n) {
-    margin-right: 0;
+  .card__title--all {
+    padding: 165px 50px 5px;
+
+    &::before {
+      top: 55px;
+      left: 94px;
+    }
+  }
+
+  .card__legend {
+    padding: 0 30px 82px;
+  }
+
+  .card__button {
+    width: 169px;
   }
 }
