@@ -1,5 +1,40 @@
-.copyright__link {
+.copyright__link-text {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
+  display: block;
+  padding: 10px 0;
+  margin-left: -1px;
+  color: #444444;
+
+  &:hover {
+    color: #444444;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link-logo {
+  margin: 3px -3px 0 0;
+  color: #666666;
+
+  &:hover {
+    color: #68b738;
+  }
+
+  &:active {
+    color: #c8e0ba;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__link-text {
+    padding: 3px 21px 10px 0;
+  }
+
+  .copyright__link-logo {
+    margin: -6px -4px 0 0;
+  }
 }

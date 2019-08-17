@@ -1,3 +1,7 @@
+.programs__wrapper {
+  padding: 0 20px;
+}
+
 .programs__list {
   .list-reset();
 }
@@ -45,7 +49,7 @@
 }
 
 .programs__item:nth-child(2) {
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 .programs__title {
@@ -55,7 +59,7 @@
   font-weight: 400;
   text-transform: uppercase;
   color: #000000;
-  padding: 8px 0 30px 71px;
+  padding: 9px 0 28px 71px;
 }
 
 .programs__description {
@@ -71,6 +75,26 @@
   line-height: 16px;
   color: #000000;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icons/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    top: 4px;
+    left: 97px;
+  }
+
+  &--weight::after {
+    top: 4px;
+    left: 96px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -79,8 +103,11 @@
     flex-direction: column;
   }
 
+  .programs__wrapper {
+    padding: 0;
+  }
+
   .programs__item {
-    padding: 78px 272px 61px 53px;
     margin-bottom: 30px;
     width: 708px;
     position: relative;
@@ -90,10 +117,18 @@
       position: absolute;
       display: block;
       background-color: @button-color;
-      width: 199px;
-      height: 201px;
       border-radius: 50%;
-      left: 450px;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::before {
+      left: 446px;
+      top: 93px;
+    }
+
+    &--weight::before {
+      left: 448px;
       top: 91px;
     }
 
@@ -105,20 +140,26 @@
     }
 
     &--slim::after {
-      background-image: url("/img/icons/icon-cat-slim.svg");
       width: 203px;
-      height: 192px;
-      top: 83px;
-      left: 477px;
+      height: 194px;
+      top: 81px;
+      left: 476px;
     }
 
     &--weight::after {
-      background-image: url("/img/icons/icon-cat-pro.svg");
-      width: 266px;
-      height: 192px;
-      top: 137px;
-      left: 413px;
+      width: 268px;
+      height: 194px;
+      top: 135px;
+      left: 412px;
     }
+  }
+
+  .programs__item--slim {
+    padding: 77px 272px 62px 53px;
+  }
+
+  .programs__item--weight {
+    padding: 76px 314px 61px 53px;
   }
 
   .programs__title {
@@ -138,6 +179,16 @@
   .programs__link {
     font-size: 20px;
     line-height: 20px;
+
+    &--slim::after {
+      top: 5px;
+      left: 132px;
+    }
+
+    &--weight::after {
+      top: 6px;
+      left: 126px;
+    }
   }
 }
 
@@ -147,17 +198,18 @@
   }
 
   .programs__title {
-    padding: 41px 0 73px 161px;
+    padding: 41px 0 74px 161px;
   }
 
   .programs__list {
     padding: 0;
     display: flex;
+    justify-content: space-between;
   }
 
   .programs__item {
-    padding: 35px 52px 60px;
-    margin: 0 80px 0 0;
+    padding: 35px 50px 62px 52px;
+    margin: 0;
     width: 570px;
 
     &::before {
@@ -180,7 +232,6 @@
     }
 
     &--slim::after {
-      background-image: url("/img/icons/icon-cat-slim.svg");
       width: 150px;
       height: 100px;
       top: 40px;
@@ -188,7 +239,6 @@
     }
 
     &--weight::after {
-      background-image: url("/img/icons/icon-cat-pro.svg");
       top: 68px;
       left: 34px;
       width: 135px;
@@ -203,7 +253,7 @@
 
   .programs__description {
     margin: 0;
-    padding-bottom: 33px;
+    padding: 0 0 30px 0;
     border-bottom: 0;
     font-size: 16px;
     line-height: 24px;
