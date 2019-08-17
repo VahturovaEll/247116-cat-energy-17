@@ -20,11 +20,23 @@
   line-height: 20px;
 }
 
-.addres__map {
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 400px;
+.address__map {
+  width: 320px;
+  height: 396px;
+  position: relative;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    width: 100%;
+  }
+}
+
+.address__map-iframe {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,18 +45,14 @@
     background-color: @additional-color;
   }
 
-  .addres__map {
-    background-image: url("../img/bg-map-tablet@1x.png");
+  .address__map-img {
+    width: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .address {
     position: relative;
-  }
-
-  .addres__map {
-    background-image: url("../img/bg-map-desktop@1x.png");
   }
 
   .address__wrapper {
