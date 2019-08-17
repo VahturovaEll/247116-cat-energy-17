@@ -40,9 +40,9 @@
             <p class="promo__description">Занялся собой? Займись котом!</p>
             <div class="promo__image-wrapper">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-                <img src="img/index-can-mobile@1x.png" class="promo__image" alt="Функциональное питание для котов" width="280" height="271">
+                <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+                <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" class="promo__image" alt="Функциональное питание для котов" width="280" height="271">
               </picture>
             </div>
             <a class="button" href="form.html">Подобрать программу</a>
@@ -126,7 +126,12 @@
           </p>
         </div>
         <div class="address__map">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa9d85b8a5231f49d480bc630fefeed1543600d20f9b1c645b7b5e404ec70173e&amp;source=constructor" width="100%" height="396" frameborder="0"></iframe>
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+              <img class="address__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Адрес компании">
+            </picture>
+          <iframe class="address__map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa9d85b8a5231f49d480bc630fefeed1543600d20f9b1c645b7b5e404ec70173e&amp;source=constructor" width="100%" height="396" frameborder="0"></iframe>
         </div>
       </section>
     </main>
