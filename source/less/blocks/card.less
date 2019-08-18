@@ -14,8 +14,8 @@
 }
 
 .card__img {
-  width: 140px;
-  height: 144px;
+  width: 100%;
+  height: auto;
 }
 
 .card__descrition {
@@ -35,6 +35,7 @@
 
 .card__title-link {
   text-align: left;
+  color: #111111;
 }
 
 .card__title {
@@ -89,6 +90,11 @@
   margin: 22px 0 0;
   background-color: @additional-color;
   color: #444444;
+
+  &:hover {
+  background-color: @additional-color;
+  color: #444444;
+  }
 
   &:active {
     background-color: #ebebeb;
