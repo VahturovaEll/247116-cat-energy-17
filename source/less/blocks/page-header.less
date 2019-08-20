@@ -8,10 +8,6 @@
 }
 
 .page-header__logo {
-  display: block;
-  width: 191px;
-  height: 40px;
-
   &:hover {
     opacity: 0.6;
   }
@@ -19,6 +15,11 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.page-header__logo-img {
+  width: 191px;
+  height: 40px;
 }
 
 @media (min-width: @tablet-width) {
@@ -35,6 +36,10 @@
     border-bottom: none;
   }
 
+  .page-header__logo {
+    margin: 0;
+  }
+
   .page-header__logo-img {
     width: 173px;
     height: 58px;
@@ -48,6 +53,11 @@
 
   .page-header__wrapper {
     padding: 0;
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
   }
 
   .page-header__logo-img {
