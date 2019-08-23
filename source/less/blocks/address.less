@@ -1,13 +1,18 @@
 .address__wrapper {
-  padding: 28px 20px 25px;
+  padding: 29px 20px 25px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-self: center;
+  background-color: @base-color;
+}
+
+.address__wrapper--dark {
   background-color: @additional-color;
 }
 
 .address__title {
-  padding-right: 20px;
+  width: 50%;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -16,29 +21,57 @@
 
 .address__description {
   margin: 0;
+  width: 50%;
   font-family: "Arial", sans-serif;
   line-height: 20px;
+  color: #444444;
 }
 
 .address__map {
   width: 100%;
   height: 396px;
   position: relative;
+  background-color:@additional-color;
 }
 
 .address__map-iframe {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 396px;
+  width: 100vw;
+  height: 400px;
 }
 
 @media (min-width: @tablet-width) {
-  .adress__wrapper {
-    padding: 0 30px;
-    background-color: @additional-color;
+  .address__wrapper {
+    padding: 46px 30px 40px;
+  }
+
+  .address__title {
+    width: 200px;
+    padding-top: 4px;
+    margin-left: 41px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #111111;
+    text-transform: uppercase;
+  }
+
+  .address__description {
+    width: 237px;
+    padding-right: 42px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+    text-transform: none;
+    text-align: end;
+  }
+
+  .address__city {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 69px;
   }
 
   .address__map-img {
@@ -53,25 +86,28 @@
 
   .address__wrapper {
     position: absolute;
-    top: 98px;
-    left: 110px;
+    top: 95px;
+    left: 109px;
     width: 570px;
-    height: 200px;
-    z-index: 1;
+    height: 201px;
+    z-index: 2;
     background-color: @base-color;
-    padding: 66px 76px 60px;
-    display: flex;
-    justify-content: space-between;
   }
 
   .address__title {
+    padding: 20px 46px 0 6px;
     font-size: 20px;
     line-height: 24px;
-    margin-right: 13px;
   }
 
   .address__description {
     font-size: 16px;
-    width: 169px;
+    margin-right: 18px;
+    text-align: start;
+    padding: 18px 38px 0 0;
+  }
+
+  .address__city {
+    margin-left: 0;
   }
 }

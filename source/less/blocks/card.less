@@ -27,10 +27,9 @@
   font-weight: 400;
 }
 
-
 .card__title-link {
   text-align: left;
-  color: #111111;
+  color: @font-color;
 }
 
 .card__title {
@@ -39,13 +38,13 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
-  color: #111111;
+  color: @font-color;
   text-transform: uppercase;
 }
 
 .card__title--all {
   margin: 0;
-  padding: 80px 0 8px;
+  padding: 79px 0 8px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -55,7 +54,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 28px;
+    top: 26px;
     left: 87px;
     width: 30px;
     height: 30px;
@@ -103,7 +102,7 @@
     border: 0;
     padding: 0 0 40px;
     margin-bottom: 140px;
-    background: #f2f2f2;
+    background: @additional-color;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,12 +117,16 @@
   }
 
   .card:nth-last-child(1) {
-    border: 1px solid #d9d9d9;
-    background-color: #ffffff;
+    border: 1px solid @border-color;
+    background-color: @base-color;
+  }
+
+  .card:nth-last-child(-n+2) {
+    margin-bottom: 45px;
   }
 
   .card__descrition {
-    padding: 34px 40px;
+    padding: 34px 38px 33px;
   }
 
   .card__title {
@@ -135,10 +138,10 @@
 
   .card__title--all {
     font-size: 20px;
-    padding: 161px 90px 5px;
+    padding: 164px 90px 5px;
 
     &::before {
-      top: 52px;
+      top: 55px;
       left: 133px;
       width: 60px;
       height: 60px;
@@ -183,6 +186,10 @@
   .card {
     width: 245px;
   }
+
+  .card:nth-last-child(-n+2) {
+    margin-bottom: 140px;
+}
 
   .card__title {
     padding: 0 5px;

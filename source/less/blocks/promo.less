@@ -22,7 +22,7 @@
   line-height: 36px;
   font-weight: 400;
   color: @base-color;
-  padding: 28px 0 24px;
+  padding: 27px 0 25px;
   text-align: center;
 }
 
@@ -73,7 +73,7 @@
     color: #000000;
     text-align: left;
     width: 430px;
-    padding: 39px 0 41px;
+    padding: 30px 0 40px;
   }
 
   .promo__description {
@@ -84,7 +84,7 @@
     padding-bottom: 48px;
   }
 
-  .promo .button {
+  .promo__button {
     width: 245px;
     padding: 16px 0;
     margin-left: 2px;
@@ -99,9 +99,9 @@
     background-position: top right;
     background-repeat: no-repeat;
     z-index: -1;
-    padding-bottom: 51px;
+    padding-bottom: 189px;
     margin-top: -172px;
-    margin-bottom: 82px;
+    margin-bottom: 80px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-desktop@2x.jpg");
@@ -110,28 +110,31 @@
 
   .promo__wrapper {
     margin-left: 80px;
+    position: relative;
   }
 
   .promo__title {
-    margin-top: 182px;
+    margin-top: 192px;
   }
 
   .promo__image-wrapper {
     z-index: 1;
-    margin: -365px 0 0 152px;
+    margin: 0;
   }
 
   .promo__image {
     width: 550px;
     height: 499px;
+    position: absolute;
+    top: 142px;
+    left: 371px;
   }
 
   .promo__description {
     padding-bottom: 53px;
   }
 
-  .promo .button {
-    margin-left: 0;
+  .promo__button {
     z-index: 1;
   }
 }
