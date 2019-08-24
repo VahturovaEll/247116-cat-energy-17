@@ -13,6 +13,7 @@
 
 .address__title {
   width: 50%;
+  padding-right: 20px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -30,6 +31,8 @@
 .address__map {
   width: 100%;
   height: 396px;
+  text-align: center;
+  overflow: hidden;
   position: relative;
   background-color:@additional-color;
 }
@@ -45,7 +48,7 @@
 
 @media (min-width: @tablet-width) {
   .address__wrapper {
-    padding: 46px 30px 40px;
+    padding: 64px 30px 59px;
   }
 
   .address__title {
@@ -76,6 +79,8 @@
 
   .address__map-img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
   }
 }
 
@@ -92,19 +97,18 @@
     height: 201px;
     z-index: 2;
     background-color: @base-color;
+    padding-top: 67px;
   }
 
   .address__title {
-    padding: 20px 46px 0 6px;
+    padding: 0 46px 0 6px;
     font-size: 20px;
     line-height: 24px;
   }
 
   .address__description {
     font-size: 16px;
-    margin-right: 18px;
     text-align: start;
-    padding: 18px 38px 0 0;
   }
 
   .address__city {

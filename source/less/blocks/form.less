@@ -1,0 +1,185 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__wrapper {
+  padding: 0 20px;
+}
+
+.form__title {
+  margin: 0;
+  padding: 30px 0 35px;
+  font-size: @title-font;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.form__description {
+  width: 250px;
+  color: @font-color;
+  text-transform: uppercase;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__list {
+  .list-reset();
+}
+
+.form__list--about-cat {
+  margin-top: 9px;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__item--text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form__label {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.form__label--text {
+  margin-right: 15px;
+  margin-left: -1px;
+}
+
+.form__text {
+  flex-grow: 1;
+  height: 45px;
+  padding: 11px 10px 14px 13px;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+}
+
+.form__list--radio {
+  margin-left: -20px;
+  margin-top: 7px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 1px solid #ededed;
+}
+
+.form__item--radio {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.form__label--radio {
+  margin-left: 66px;
+}
+/*
+.form__label--radio::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -47px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.form__radio:checked + .form__label--radio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -38px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  background-color: #68b738;
+  border-radius: 50%;
+}*/
+
+.form__legend-title {
+  position: relative;
+  width: 100%;
+  margin-left: -1px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #111111;
+  text-transform: none;
+}
+
+.form__legend-title::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  width: 100%;
+  height: 3px;
+  background-color: #68b738;
+}
+
+.form__legend-title--additional::after {
+  left: 165px;
+}
+
+.form__legend-title--about-owner {
+  margin-bottom: 17px;
+}
+
+.form__list--about-owner {
+  margin-top: 28px;
+}
+
+.form__item--about-owner {
+  margin: 15px 0;
+}
+
+.form__input {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+}
+
+.form__input--phone {
+  top: 12px;
+  right: 13px;
+}
+
+.form__list--checkbox {
+  margin-top: 25px;
+}
+
+.form__item-checkbox {
+  margin-top: 40px;
+}
+
+.form__wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.form__info {
+  margin-top: 21px;
+  align-self: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-transform: none;
+}

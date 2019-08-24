@@ -57,7 +57,7 @@
 }
 
 .example__outlay {
-  margin: 35px 0;
+  margin: 34px 0;
   text-transform: uppercase;
   color: @font-color;
   line-height: 20px;
@@ -65,22 +65,24 @@
   width: 100%;
 }
 
-.example__list {
-  .list-reset();
+.example__slider-wrapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 35px;
+}
+
+.example__slider-list {
   position: relative;
   display: flex;
   width: 320px;
   height: 240px;
 }
 
-
-.example__item {
-  .list-reset();
-}
-
 .example__image {
-    display: block;
+  display: block;
 }
+
 .example__image-after {
   position: absolute;
   top: 0;
@@ -88,12 +90,17 @@
   width: 0;
   height: 100%;
   background-color: @additional-color;
+  object-fit: none;
+  object-position: left;
 }
 
-.example__toggles {
-  width: 284px;
-  padding: 32px 20px;
-  margin: 0 auto;
+.example__slider-toggles {
+  width: 250px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .example__toggle {
@@ -101,10 +108,41 @@
   font-size: 16px;
   line-height: 20px;
   color: @font-color;
-  text-transform: uppercase;
   background-color: @additional-color;
-  border: none;/*
-  border-bottom: 1px dashed rgba(17, 17, 17, 0.23);*/
+  border: none;
+  text-transform: uppercase;
+  border-bottom: 1px dashed @border-color;
+
+  &:hover {
+    border-bottom: 1px solid @border-color;
+  }
+}
+
+.example__controls-bar {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  margin-top: 3px;
+  margin-right: 17px;
+  margin-left: 18px;
+  background-color: @base-color;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+.example__controls-bar::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+  background-color: @button-color;
+  border-radius: 10px;
+}
+
+.example__controls-button {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -178,7 +216,7 @@
     text-align: right;
   }
 
-  .example__wrapp{
+  .example__slider-list {
     margin-top: 66px;
     width: 690px;
     height: 517px;
@@ -188,25 +226,8 @@
   .example__image {
     width: 690px;
     height: 517px;
-  }
+}
 
-  .example__list {
-    .list-reset();
-    position: relative;
-    display: flex;
-    list-style: none;
-    width: 690px;
-    height: 517px;
-    margin-left: 13px;
-  }
-
-  .example__item {
-    .list-reset();
-  }
-
-  .example__image {
-      display: block;
-  }
   .example__image-after {
     position: absolute;
     top: 0;
@@ -216,62 +237,61 @@
     background-color: @additional-color;
   }
 
-  .example__toggles {
-    width: 284px;
-    padding: 32px 20px;
-    margin: 0 auto;
+  .example__slider-toggles {
+    width: 600px;
+    margin-top: 20px;
   }
 
-  .example__toggle {
-    padding: 0;
-    font-size: 16px;
+  .example__slider-toggle {
+    padding-bottom: 5px;
+    font-size: 20px;
     line-height: 20px;
-    color: @font-color;
+    color: #111111;
     text-transform: uppercase;
-    background-color: @additional-color;
-    border: none;
-    border-bottom: 1px dashed rgba(17, 17, 17, 0.23);
   }
 
+  .example__slider-toggle--before {
+    margin-left: 14px;
+  }
 
-  /*
-  .example {
-    border-top: 1px solid @border-color;
+  .example__controls-bar {
     position: relative;
-    background: none;
+    width: 428px;
+    height: 6px;
+    margin-top: 7px;
+    margin-right: 21px;
+    margin-left: 24px;
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 4px;
   }
 
-  .example::after {
+  .example__controls-bar::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: @additional-color;
-    z-index: -1;
+    top: 0px;
+    left: 53%;
+    width: 8px;
+    height: 8px;
+    background-color: @button-color;
+    border-radius: 560%;
+    z-index: 1;
   }
 
-  .example__list {
-    display: flex;
+  .example__controls-bar::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    width: 34px;
+    height: 34px;
+    background-color: @base-color;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
-
-  .example__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
-
-  .example__legend {
-    font-size: 14px;
-    line-height: 14px;
-  }
-
-  .example__outlay {
-    font-size: 20px;
-  }*/
 }
-/*
+
 @media (min-width: @desktop-width) {
   .example {
     border-top: 0;
@@ -279,4 +299,4 @@
     background: none;
   }
 }
-*/
+

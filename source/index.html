@@ -105,7 +105,7 @@
         <div class="container">
           <div class="example__wrapper">
             <h2 class="example__title">Живой пример</h2>
-            <div>
+            <div class="example__wrapper-desk">
               <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив
                 свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
                 При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
@@ -121,30 +121,24 @@
                 </div>
                 <p class="example__outlay">Затраты на питание: 15 000 руб.</p>
               </div>
-              <div class="example__wrapp slider">
-                <ul class="example__list slider__list">
-                  <li class="example__item slider__item">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
-                      <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до диеты" width="320" height="240">
-                    </picture>
-                  </li>
-                  <li class="example__item slider__item">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
-                      <img class="example__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после диеты" width="320" height="240">
-                    </picture>
-                  </li>
-                </ul>
-                <div class="example__toggles slider__toggles">
-                  <button class="slider__toggle slider__toggle--before" type="button">Было</button>
-                    <div class="slider__controls-bar">
-                      <div class="slider__controls-button"></div>
-                    </div>
-                  <button class="slider__toggle slider__toggle--after" type="button">Стало</button>
-                  </div>
+              <div class="example__slider-wrapp">
+                <div class="example__slider-list">
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                    <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до диеты" width="320" height="240">
+                  </picture>
+                  <picture>
+                    <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                    <img class="example__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после диеты" width="320" height="240">
+                  </picture>
+                </div>
+                <div class="example__slider-toggles">
+                  <button class="example__toggle example__toggle--before" type="button">Было</button>
+                  <button class="example__controls-bar" type="button"></button>
+                  <button class="example__toggle example__toggle--after" type="button">Стало</button>
+                </div>
               </div>
             </div>
           </div>
