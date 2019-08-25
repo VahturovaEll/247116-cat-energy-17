@@ -242,7 +242,7 @@
     margin-top: 20px;
   }
 
-  .example__slider-toggle {
+  .example__toggle {
     padding-bottom: 5px;
     font-size: 20px;
     line-height: 20px;
@@ -250,7 +250,7 @@
     text-transform: uppercase;
   }
 
-  .example__slider-toggle--before {
+  .example__toggle--before {
     margin-left: 14px;
   }
 
@@ -267,22 +267,15 @@
   }
 
   .example__controls-bar::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 53%;
-    width: 8px;
-    height: 8px;
-    background-color: @button-color;
-    border-radius: 560%;
-    z-index: 1;
+    content: none;
   }
 
-  .example__controls-bar::after {
-    content: "";
+  .example__controls-button {
     position: absolute;
     top: -14px;
-    left: 50%;
+    left: 198px;
+    display: flex;
+    box-sizing: border-box;
     width: 34px;
     height: 34px;
     background-color: @base-color;
@@ -290,13 +283,97 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   }
+
+  .example__controls-button::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    background-color: @button-color;
+    border-radius: 50%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .example {
     border-top: 0;
     position: relative;
-    background: none;
+  }
+
+  .example__title {
+    padding: 15px 0;
+  }
+
+  .example__description {
+    width: 455px;
+    margin-top: 78px;
+  }
+
+  .example__wrapper-desk {
+    margin-top: 52px;
+    display: flex;
+  }
+
+  .example__statistics {
+    width: 610px;
+    margin-top: 52px;
+    padding: 0 0 71px 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .example__data {
+    flex-grow: 0;
+    width: 162px;
+    margin-right: 42px;
+  }
+
+  .example__outlay {
+      width: auto;
+      margin-top: 56px;
+      margin-left: 1px;
+  }
+
+  .example__outlay-price {
+    margin-left: 59px;
+  }
+
+  .example__legend {
+    background-color: #f2f2f2;
+  }
+
+  .example__slider-wrapp {
+    margin: 0;
+    margin-top: -249px;
+    }
+
+  .example__slider-list {
+    margin-left: -41px;
+  }
+
+  .example__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip: rect(auto 366px auto auto);
+  }
+
+  .example__image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 690px;
+    height: 517px;
+    clip: rect(auto auto auto 366px);
+    background-color: transparent;
+  }
+
+  .example__slider-toggles {
+    margin-top: 41px;
+    margin-left: 17px;
   }
 }
 

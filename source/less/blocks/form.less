@@ -3,13 +3,9 @@
   flex-direction: column;
 }
 
-.form__wrapper {
-  padding: 0 20px;
-}
-
 .form__title {
   margin: 0;
-  padding: 30px 0 35px;
+  padding: 30px 20px 35px;
   font-size: @title-font;
   line-height: 60px;
   font-weight: 400;
@@ -17,6 +13,7 @@
 
 .form__description {
   width: 250px;
+  padding: 0 20px;
   color: @font-color;
   text-transform: uppercase;
 }
@@ -29,6 +26,7 @@
 
 .form__list {
   .list-reset();
+  padding: 0 20px;
 }
 
 .form__list--about-cat {
@@ -50,7 +48,7 @@
   position: relative;
   font-size: 16px;
   line-height: 18px;
-  color: #111111;
+  color: @font-color;
   text-transform: uppercase;
 }
 
@@ -83,17 +81,28 @@
   margin-bottom: 25px;
 }
 
+.form__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .form__label--radio {
   margin-left: 66px;
 }
-/*
+
 .form__label--radio::before {
   content: "";
   position: absolute;
   top: -6px;
   left: -47px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
@@ -105,13 +114,11 @@
   position: absolute;
   top: 3px;
   left: -38px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   width: 12px;
   height: 12px;
-  background-color: #68b738;
+  background-color: @button-color;
   border-radius: 50%;
-}*/
+}
 
 .form__legend-title {
   position: relative;
@@ -119,7 +126,7 @@
   margin-left: -1px;
   font-size: 24px;
   line-height: 24px;
-  color: #111111;
+  color: @font-color;
   text-transform: none;
 }
 
@@ -129,15 +136,12 @@
   top: 14px;
   width: 100%;
   height: 3px;
-  background-color: #68b738;
-}
-
-.form__legend-title--additional::after {
-  left: 165px;
+  background-color: @button-color;
 }
 
 .form__legend-title--about-owner {
   margin-bottom: 17px;
+  padding: 0 20px;
 }
 
 .form__list--about-owner {
@@ -159,17 +163,74 @@
   right: 13px;
 }
 
-.form__list--checkbox {
-  margin-top: 25px;
+.form__legend-title--comment {
+  margin-bottom: 35px;
 }
 
-.form__item-checkbox {
+.form__legend-title--comment::after {
+  left: 143px;
+}
+
+.form__list--comment {
+  margin-top: 11px;
+}
+
+.form__text--comment {
+  resize: vertical;
+  width: 280px;
+  height: 150px;
+}
+
+.form__legend-title--additional{
+  padding: 0 20px;
+}
+
+.form__legend-title--additional::after {
+  left: 165px;
+}
+
+.form__list--checkbox {
   margin-top: 40px;
+}
+
+.form__item--checkbox {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.form__checkbox {
+  margin-top:0;
+}
+
+.form__label--checkbox {
+  margin-left: 46px;
+}
+
+.form__label--checkbox::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -46px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.form__checkbox:checked + .form__label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -41px;
+  width: 21px;
+  height: 16px;
+  background-image: url("../img/icons/icon-tick.svg");
+  background-repeat: no-repeat;
 }
 
 .form__wrapper-bottom {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
   margin-top: 18px;
   margin-bottom: 18px;
 }
@@ -182,4 +243,166 @@
   line-height: 16px;
   color: #444444;
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .form__item--text {
+    margin-bottom: 20px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+    color: #111111;
+    text-transform: uppercase;
+  }
+
+  .form__text {
+    height: 52px;
+    padding-left: 17px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #444444;
+    text-transform: uppercase;
+    border: 1px solid #e6e6e6;
+  }
+
+  .form__list--radio {
+    width: auto;
+    margin: 52px 0 0 0;
+    padding: 0 0 2px 0;
+    padding-bottom: 2px;
+    border-color: #e6e6e6;
+  }
+
+  .form__item--radio {
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+
+  .form__label--radio::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__radio:checked + .form__label--radio::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -49px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .form__legend-title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #111111;
+    text-transform: none;
+  }
+
+  .form__legend-title::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 670px;
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+  }
+
+  .form__legend-title::after {
+    top: 22px;
+  }
+
+  .form__legend-title--about-owner {
+    margin-bottom: 60px;
+  }
+
+  .form__legend-title--about-owner::after {
+    left: 554px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #111111;
+    text-transform: uppercase;
+  }
+
+  .form__category--comment {
+    margin-top: 45px;
+  }
+
+  .form__legend-title--comment {
+    margin-bottom: 76px;
+  }
+
+  .form__legend-title--comment::after {
+    left: 220px;
+  }
+
+  .form__text--comment {
+    width: 100%;
+    height: 174px;
+  }
+
+  .form__category--checkbox {
+    margin-top: 62px;
+  }
+
+  .form__legend-title--additional::after {
+    left: 253px;
+  }
+
+  .form__list--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 66px;
+  }
+
+  .form__item--checkbox {
+    width: 40%;
+    margin-bottom: 52px;
+  }
+
+  .form__label--checkbox::before {
+    top: -9px;
+    left: -59px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .form__checkbox:checked + .form__label--checkbox::after {
+    top: 3px;
+    left: -49px;
+  }
+
+  .form__wrapper-bottom {
+    flex-direction: row;
+    margin-top: 13px;
+    margin-bottom: 0;
+  }
+
+  .form__submit {
+    width: 283px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 20px;
+  }
+
+  .form__info {
+    margin-top: 11px;
+    margin-left: 62px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #444444;
+    text-transform: none;
+  }
 }
