@@ -25,7 +25,7 @@
               <picture>
                 <source media="(min-width: 1300px)" srcset="img/icons/logo-desktop.svg">
                 <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
-                <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy">
+                <img src="img/icons/logo-mobile.svg" class="page-header__logo-img" alt="Cat Energy" width="190" height="38">
               </picture>
             </a>
           </div>
@@ -49,82 +49,82 @@
             <h1 class="form__title">Подбор программы</h1>
             <p class="form__description">Заполните анкету и мы подберем программу питания
               для вашего кота</p>
-            <form method="post" action="https://echo.htmlacademy.ru">
-              <fieldset class="form__group">
+            <form class="form__main" method="post" action="https://echo.htmlacademy.ru">
+              <fieldset class="form__group form__group--about-cat">
                 <ul class="form__list form__list--about-cat">
                   <li class="form__item form__item--text">
                     <label class="form__label form__label--text" for="name">Имя:*</label>
-                    <input class="form__text form__text--name" type="text" id="name" name="Имя кота" placeholder="Барсик" required>
+                    <input class="form__text form__text--name" type="text" id="name" name="cat_name" placeholder="Барсик" required>
                   </li>
                   <li class="form__item form__item--text">
                     <label class="form__label form__label--text" for="weight">Вес (кг):*</label>
-                    <input class="form__text form__text--weight" type="text" id="weight" name="Вес кота, кг" placeholder="7" required>
+                    <input class="form__text form__text--weight" type="text" id="weight" name="cat_weight" placeholder="7" required>
                   </li>
                   <li class="form__item form__item--text">
                     <label class="form__label form__label--text" for="age">Возраст (лет):</label>
-                    <input class="form__text form__text--age" type="text" id="age" name="Возраст кота, лет" placeholder="7">
+                    <input class="form__text form__text--age" type="text" id="age" name="cat_age" placeholder="7">
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__group">
+              <fieldset class="form__group form__group--radio">
                 <ul class="form__list form__list--radio">
                   <li class="form__item  form__item--radio">
-                    <input class="form__radio form__hidden" id="slim" type="radio" name="Program" value="Похудение" checked>
+                    <input class="form__radio visually-hidden" id="slim" type="radio" name="Program" value="lose_weight" checked>
                     <label class="form__label form__label--radio" for="slim">Похудение</label>
                   </li>
                   <li class="form__item  form__item--radio">
-                    <input class="form__radio form__hidden" id="powerful" type="radio" name="Program" value="Набор массы">
+                    <input class="form__radio visually-hidden" id="powerful" type="radio" name="Program" value="mass_gain">
                     <label class="form__label form__label--radio" for="powerful">Набор массы</label>
                   </li>
                   <li class="form__item  form__item--radio">
-                    <input class="form__radio form__hidden" id="advise" type="radio" name="Program" value="Не знаю">
+                    <input class="form__radio visually-hidden" id="advise" type="radio" name="Program" value="need_advice">
                     <label class="form__label form__label--radio" for="advise">Не знаю (нужен ваш совет)</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__group">
+              <fieldset class="form__group form__group--about-owner">
                 <legend class="form__legend-title form__legend-title--about-owner">Контактные данные (владельца кота)</legend>
                 <ul class="form__list form__list--about-owner">
                   <li class="form__item form__item--about-owner">
-                    <label class="form__label form__label--text" for="email">E-mail:&#8432;</label>
+                    <label class="form__label form__label--text" for="email">E-mail:*</label>
                     <input class="form__text" type="email" id="email" name="email" value="" placeholder="Kuklachev@gmail.com" required>
-                    <svg class="form__input form__input--email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 13" width="17px" height="13px">
-                      <path fill="#222222" d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"></path>
+                    <svg class="form__input form__input--email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 13" width="17" height="13" fill="currentColor">
+                      <use xlink:href="#icon-mail"></use>
                     </svg>
                   </li>
                   <li class="form__item form__item--about-owner">
-                    <label class="form__label form__label--text" for="tel">Телефон:&#8432;</label>
-                    <input class="form__text" type="tel" id="tel" name="tel" value="" placeholder="8(960)900-60-90" required>
-                    <svg class="form__input form__input--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20px" height="20px">
-                      <path fill="#222222" d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"></path>
+                    <label class="form__label form__label--text" for="tel">Телефон:*</label>
+                    <input class="form__text" type="tel" id="tel" name="tel" value="" placeholder="8 (960) 900-60-90" required>
+                    <svg class="form__input form__input--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+                      <use xlink:href="#icon-phone"></use>
                     </svg>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__group">
-                <div class="form__list form__list--comment">
-                  <legend class="form__legend-title form__legend-title--comment">Комментарий</legend>
-                  <label class="form__hidden" for="comment">Комментарий</label>
-                  <textarea class="form__text form__text--comment" type="text"  id="comment" name="Комментарий" rows="8" wrap>Расскажите обо всех повадках своего кота</textarea>
-                </div>
+              <fieldset class="form__group form__group--comment">
+                <legend class="form__legend-title form__legend-title--comment">Комментарий</legend>
+                  <div class="form__list form__list--comment">
+                    <label class="visually-hidden" for="comment">Комментарий</label>
+                    <textarea class="form__text form__text--comment" id="comment" name="comment" cols="41" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+                  </div>
               </fieldset>
-              <fieldset class="form__group">
-                <legend class="form__legend-title form__legend-title--additional">Дополнительно:</legend>
+              <fieldset class="form__group form__group--checkbox">
+                <legend class="form__legend-title form__legend-title--additional">Дополнительно</legend>
                 <ul class="form__list form__list--checkbox">
                   <li class="form__item  form__item--checkbox">
-                    <input class="form__checkbox form__hidden" type="checkbox" id="no-sugar" name="Additionally" value="Сахарозаменитель" checked>
+                    <input class="form__checkbox visually-hidden" type="checkbox" id="no-sugar" name="Additionally" value="sweetener" checked>
                     <label class="form__label form__label--checkbox" for="no-sugar">Сахарозаменитель</label>
                   </li>
                   <li class="form__item  form__item--checkbox">
-                    <input class="form__checkbox form__hidden" type="checkbox" id="water" name="Additionally" value="Питьевая вода">
+                    <input class="form__checkbox visually-hidden" type="checkbox" id="water" name="Additionally" value="drinking_water">
                     <label class="form__label form__label--checkbox" for="water">Питьевая вода</label>
                   </li>
                   <li class="form__item  form__item--checkbox">
-                    <input class="form__checkbox form__hidden" type="checkbox" id="milk" name="Additionally" value="Молоко">
+                    <input class="form__checkbox visually-hidden" type="checkbox" id="milk" name="Additionally" value="milk">
                     <label class="form__label form__label--checkbox" for="milk">Молоко</label>
                   </li>
                   <li class="form__item  form__item--checkbox">
-                    <input class="form__checkbox form__hidden" type="checkbox" id="vitamins" name="Additionally" value="Витамины">
+                    <input class="form__checkbox visually-hidden" type="checkbox" id="vitamins" name="Additionally" value="vitamins">
                     <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
                   </li>
                 </ul>
@@ -151,7 +151,7 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.webp, img/map-pin-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.jpg, img/map-pin-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/map-pin-mobile@1x.webp, img/map-pin-mobile@2x.webp 2x">
-            <img class="address__map-img" src="img/map-pin-mobile@1x.jpg" srcset="img/map-pin-mobile@2x.jpg 2x" alt="Адрес компании">
+            <img class="address__map-img" src="img/map-pin-mobile@1x.jpg" srcset="img/map-pin-mobile@2x.jpg 2x" alt="Адрес компании" width="320" height="396">
           </picture>
           <iframe class="address__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1563880130424!5m2!1sru!2sua" style="border: none;" allowfullscreen></iframe>
         </div>
