@@ -220,11 +220,11 @@
   }
 
   .example__legend--weight {
-    width: 105px;
+    width: 115px;
   }
 
   .example__legend--time {
-    width: 130px;
+    width: 143px;
   }
 
   .example__outlay {
@@ -236,6 +236,18 @@
     line-height: 28px;
     color: @font-color;
     text-align: right;
+  }
+
+
+  .example_.example__slider-wrapp::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 42.6%;
+    background-image: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%, #eaeaea 100%);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
 
   .example__slider-list {
@@ -309,6 +321,13 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &:active {
+      &::before {
+        top: 11px;
+        left: 11px;
+      }
+    }
   }
 
   .example__controls-button::before {
@@ -405,6 +424,5 @@
 
   .example__slider-toggles {
     margin-top: 41px;
-    margin-left: 17px;
   }
 }

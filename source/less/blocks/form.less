@@ -71,6 +71,10 @@
   &:focus {
     border: 2px solid #444444;
     padding-left: 12px;
+
+    + .form__input {
+      fill: @button-color;
+    }
   }
 
   &:invalid:not(:focus):not(:placeholder-shown) {
@@ -137,6 +141,8 @@
   line-height: 24px;
   color: @font-color;
   text-transform: none;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .form__legend-title::after {
@@ -147,6 +153,7 @@
   width: 100vw;
   height: 3px;
   background-color: @button-color;
+  z-index: -1;
 }
 
 .form__legend-title--about-owner {
@@ -164,12 +171,8 @@
 
 .form__input {
   position: absolute;
-  top: 20px;
-  right: 20px;
-
-  &:active {
-    color: #d1e9c3;
-  }
+  top: 17px;
+  right: 17px;
 
   &:invalid {
     color: #ff8282;
@@ -179,10 +182,6 @@
 .form__input--phone {
   top: 17px;
   right: 17px;
-
-  &:active {
-    color: #d1e9c3;
-  }
 
   &:invalid {
     color: #ff8282;
@@ -243,7 +242,7 @@
   border: 1px solid #cdcdcd;
 
   &:hover {
-    border: 1px solid #d7d7d7;
+    border: 1px solid #bababa;
   }
 
   &:active {
@@ -403,6 +402,7 @@
     width: 100vw;
     height: 3px;
     background-color: #68b738;
+    z-index: -1;
   }
 
   .form__legend-title::after {
