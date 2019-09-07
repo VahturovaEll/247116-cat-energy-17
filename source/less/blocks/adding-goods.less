@@ -30,11 +30,14 @@
 }
 
 .adding-goods__action {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 290px;
   margin: 40px 0 35px;
+  padding: 187px 50px 0;
+  color: @base-color;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
   position: relative;
   background-color: #68b738;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -45,8 +48,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 65px;/*
-    left: 113px;*/
+    top: 66px;
     left: 50%;
     width: 55px;
     height: 60px;
@@ -54,16 +56,6 @@
     background-image: url("../img/icons/icon-gift.svg");
     background-repeat: no-repeat;
   }
-}
-
-.adding-goods__action-description {
-  width: 170px;
-  margin: auto auto 42px;
-  color: @base-color;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Arial", sans-serif;
-  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -89,42 +81,23 @@
   }
 
   .adding-goods__wrapper {
-    padding: 59px 0 62px;
-  }
-
-  .adding-action__description {
-    margin-right: 114px;
-    margin-bottom: 68px;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #ffffff;
-    text-transform: none;
-    text-align: start;
+    padding: 59px 0 76px;
   }
 
   .adding-goods__action {
-    width: 708px;
     height: 200px;
-    margin-top: 69px;
-    margin-bottom: 15px;
+    margin: 70px 0 0;
+    padding: 73px 100px 0 424px;
     background-color: #68b738;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    background-size: 708px 200px;
+    background-size: cover;
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
 
     &::before {
-      left: 91px;
+      left: 118px;
     }
-  }
-
-  .adding-goods__action-description {
-    margin-right: 114px;
-    margin-bottom: 68px;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: start;
   }
 }
 
@@ -138,7 +111,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 73px;
+    padding-bottom: 88px;
   }
 
   .adding-goods__title {
@@ -158,7 +131,9 @@
   .adding-goods__action {
     width: 245px;
     height: 289px;
+    padding: 188px 40px 0;
     margin-top: 0;
+    text-align: center;
     background-color: #68b738;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: 245px 289px;
@@ -167,11 +142,5 @@
       left: 50%;
       transform: translate(-50%);
     }
-  }
-
-  .adding-goods__action-description {
-    margin-right: auto;
-    margin-bottom: 42px;
-    text-align: center;
   }
 }

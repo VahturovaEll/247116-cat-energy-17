@@ -64,23 +64,21 @@
       </section>
       <section class="programs">
         <div class="container">
-          <div class="programs__wrapper">
-            <ul class="programs__list">
-              <li class="programs__item programs__item--slim">
-                <h3 class="programs__title">Похудение</h3>
-                <p class="programs__description">Ваш кот весит больше собаки и почти утратил
-                  способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему
-                  питомцу сбросить лишний вес</p>
-                <a class="programs__link programs__link--slim" href="catalog/slim.html">Каталог Slim</a>
-              </li>
-              <li class="programs__item programs__item--weight">
-                <h3 class="programs__title">Набор массы</h3>
-                <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
-                  Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-                <a class="programs__link programs__link--weight" href="catalog/pro.html">Каталог Pro</a>
-              </li>
-            </ul>
-          </div>
+          <ul class="programs__list">
+            <li class="programs__item programs__item--slim">
+              <h3 class="programs__title">Похудение</h3>
+              <p class="programs__description">Ваш кот весит больше собаки и почти утратил
+                способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему
+                питомцу сбросить лишний вес</p>
+              <a class="programs__link programs__link--slim" href="catalog/slim.html">Каталог Slim</a>
+            </li>
+            <li class="programs__item programs__item--weight">
+              <h3 class="programs__title">Набор массы</h3>
+              <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак?
+                Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <a class="programs__link programs__link--weight" href="catalog/pro.html">Каталог Pro</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="advantages">
@@ -114,10 +112,10 @@
                 <div class="example__statistics">
                   <div class="example__statistics-top">
                     <p class="example__data">5 КГ
-                      <small class="example__legend example__legend--weight">снижение веса</small>
+                      <span class="example__legend example__legend--weight">снижение веса</span>
                     </p>
                     <p class="example__data">60 ДНЕЙ
-                      <small class="example__legend example__legend--time">затрачено времени</small>
+                      <span class="example__legend example__legend--time">затрачено времени</span>
                     </p>
                   </div>
                   <p class="example__outlay">Затраты на питание:
@@ -141,7 +139,7 @@
                 <div class="example__slider-toggles">
                   <button class="example__toggle example__toggle--before" type="button">Было</button>
                   <div class="example__controls-bar">
-                    <button class="example__controls-button" type="button"></button>
+                    <button class="example__controls-button" type="button" aria-label="Результат программы на живом примере"></button>
                   </div>
                   <button class="example__toggle example__toggle--after" type="button">Стало</button>
                 </div>
@@ -164,7 +162,7 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.webp, img/map-pin-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/map-pin-tablet@1x.jpg, img/map-pin-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/map-pin-mobile@1x.webp, img/map-pin-mobile@2x.webp 2x">
-            <img class="address__map-img" src="img/map-pin-mobile@1x.jpg" srcset="img/map-pin-mobile@2x.jpg 2x" alt="Адрес компании" width="320" height="400">
+            <img class="address__map-img" src="img/map-pin-mobile@1x.jpg" srcset="img/map-pin-mobile@2x.jpg 2x" alt="Адрес компании" width="320" height="362">
           </picture>
           <iframe class="address__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1563880130424!5m2!1sru!2sua" style="border: none;" allowfullscreen></iframe>
         </div>
@@ -187,7 +185,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link social__link--insta" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.1 16" width="16" height="16" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
                     <use xlink:href="#icon-insta"></use>
                   </svg>
                 </a>
@@ -202,9 +200,9 @@
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
-            <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.4 50" width="27" height="34" fill="currentColor">
+              <span>HTML Academy</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="copyright__link-icon" viewBox="0 0 39 50" width="27" height="34" fill="currentColor">
                 <use xlink:href="#icon-htmlacademy"></use>
               </svg>
             </a>

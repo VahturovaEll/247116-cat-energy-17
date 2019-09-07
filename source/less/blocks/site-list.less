@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .site-list__item-link {
@@ -43,6 +44,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .site-list {
+    max-width: 610px;
+    width: 610px;
+    padding-left: 131px;
+  }
+
   .site-list--main {
     .site-list__item-link {
       color: @base-color;
@@ -53,5 +60,9 @@
       border-bottom: 2px solid @base-color;
       background-color: transparent;
     }
+  }
+
+  .site-list__item-link {
+    margin-left: 0;
   }
 }

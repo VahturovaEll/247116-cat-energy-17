@@ -1,14 +1,19 @@
-.copyright__link-text {
+.copyright__link-logo {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
-  display: block;
-  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 7px 0;
   margin-left: -1px;
   color: #444444;
 
   &:hover {
-    color: #444444;
+    .copyright__link-icon {
+      fill: @button-color;
+    }
   }
 
   &:active {
@@ -16,25 +21,17 @@
   }
 }
 
-.copyright__link-logo {
+.copyright__link-icon {
   margin: 3px 0 0;
   color: #666666;
-
-  &:hover {
-    color: #68b738;
-  }
-
-  &:active {
-    color: #c8e0ba;
-  }
 }
 
 @media (min-width: @tablet-width) {
-  .copyright__link-text {
-    padding: 3px 21px 10px 0;
+  .copyright__link-logo {
+    padding: 0;
   }
 
-  .copyright__link-logo {
+  .copyright__link-icon {
     margin: -6px 0 0 0;
   }
 }

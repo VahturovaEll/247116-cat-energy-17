@@ -26,7 +26,6 @@
 
 .address__description {
   margin: 0;
-  width: 50%;
   font-family: "Arial", sans-serif;
   line-height: 20px;
   color: #444444;
@@ -34,7 +33,7 @@
 
 .address__map {
   width: 100%;
-  height: 400px;
+  height: 362px;
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -47,7 +46,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 400px;
+  height: 362px;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,10 +82,18 @@
     margin-left: 69px;
   }
 
+  .address__map {
+    height: 396px;
+  }
+
   .address__map-img {
     width: 100%;
-    height: 400px;
+    height: 396px;
     object-fit: cover;
+  }
+
+  .address__map-iframe {
+    height: 396px;
   }
 }
 
