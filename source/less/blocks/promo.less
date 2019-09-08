@@ -1,6 +1,6 @@
 .promo {
   background-image: url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(to left, #63a73a,#65a93c 305px,#65a93c 100%);
+    linear-gradient(to left, #63a73a, #65a93c 305px, #65a93c 100%);
   background-size: 320px 305px, 100% 305px;
   background-position: top;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg"),
-      linear-gradient(to left, #63a73a,#65a93c 305px,#65a93c 100%);
+      linear-gradient(to left,  #63a73a,  #65a93c 305px, #65a93c 100%);
   }
 }
 
@@ -94,19 +94,8 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    background-image: url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(#63a73a, #63a73a 305px);
-    background-size: 50%;
-    background-position: top right;
-    background-repeat: no-repeat;
-    z-index: -1;
     padding-bottom: 189px;
-    margin-top: -172px;
     margin-bottom: 80px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
-    }
   }
 
   .promo__wrapper {
@@ -115,7 +104,7 @@
   }
 
   .promo__title {
-    margin-top: 192px;
+    padding: 50px 0 40px;
   }
 
   .promo__image-wrapper {
@@ -127,7 +116,7 @@
     width: 550px;
     height: 499px;
     position: absolute;
-    top: 142px;
+    top: -30px;
     left: 371px;
   }
 

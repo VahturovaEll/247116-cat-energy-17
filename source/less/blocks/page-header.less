@@ -49,6 +49,25 @@
 @media (min-width: @desktop-width) {
   .page-header {
     padding: 55px 0;
+    position: relative;
+  }
+
+  .page-header--index::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(#63a73a, #63a73a 305px);
+    background-size: 720px 696px;
+    background-position: left;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(#63a73a, #63a73a 305px);
+    }
   }
 
   .page-header__wrapper {
