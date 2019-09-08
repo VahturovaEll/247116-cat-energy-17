@@ -68,7 +68,7 @@
 
 .programs__link {
   display: inline-block;
-  padding-right: 37px;
+  padding-right: 47px;
   vertical-align: top;
   font-size: 16px;
   line-height: 16px;
@@ -89,17 +89,18 @@
     &::after {
       background-image: url("../img/icons/icon-right-arrow-verylong.svg");
       width: 34px;
+      right: 0;
     }
   }
 
   &--slim::after {
     top: 3px;
-    right: 0;
+    left: 97px;
   }
 
   &--weight::after {
-    top: 4px;
-    right: 0;
+    top: 2px;
+    left: 95px;
   }
 
   &:active {
@@ -193,14 +194,16 @@
   .programs__link {
     font-size: 20px;
     line-height: 20px;
-    padding-right: 48px;
+    padding-right: 58px;
 
     &--slim::after {
       top: 5px;
+      left: 131px;
     }
 
     &--weight::after {
-      top: 6px;
+      top: 5px;
+      left: 125px;
     }
   }
 }
