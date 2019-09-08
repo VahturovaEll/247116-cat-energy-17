@@ -122,6 +122,15 @@
   border-radius: 50%;
 }
 
+.form__radio:focus ~ .form__label--radio::after {
+  top: 9px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: @button-color;
+  border-radius: 50%;
+}
+
 .form__label--radio:hover {
   &::before {
     border-color: #bababa;
@@ -130,6 +139,11 @@
 
 .form__radio:active + .form__label--radio {
   opacity: 0.3;
+}
+
+.form__radio:disabled ~ .form__label--radio {
+  opacity: 0.3;
+  cursor: text;
 }
 
 .form__legend-title {
@@ -175,9 +189,14 @@
   right: 17px;
 }
 
+.form__input--email {
+  top: 20px;
+  right: 19px;
+}
+
 .form__input--phone {
-  top: 14px;
-  right: 14px;
+  top: 17px;
+  right: 16px;
 }
 
 .form__list--comment {
@@ -245,6 +264,15 @@
   background-repeat: no-repeat;
 }
 
+.form__checkbox:focus ~ .form__label--checkbox::after {
+  top: 7px;
+  left: 5px;
+  width: 21px;
+  height: 16px;
+  background-image: url("../img/icons/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
 .form__label--checkbox:hover {
   &::before {
     border-color: #bababa;
@@ -253,6 +281,11 @@
 
 .form__checkbox:active + .form__label--checkbox {
   opacity: 0.3;
+}
+
+.form__checkbox:disabled ~ .form__label--checkbox {
+  opacity: 0.3;
+  cursor: text;
 }
 
 .form__wrapper-bottom {
@@ -443,12 +476,12 @@
   }
 
   .form__legend-title--additional::before {
-    top: 47px;
+    top: 46px;
   }
 
   .form__legend-title--additional::after {
     left: 251px;
-    top: 47px;
+    top: 46px;
   }
 
   .form__list--checkbox {
@@ -547,6 +580,10 @@
     margin-right: 20px;
   }
 
+  .form__text {
+    padding-left: 17px;
+  }
+
   .form__legend-title--about-owner {
     padding: 29px 0;
   }
@@ -571,6 +608,10 @@
     width: 570px;
   }
 
+  .form__input--phone {
+    top: 17px;
+    right: 19px;
+  }
   .form__legend-title--comment::before {
     top: 31px;
     right: 1259px;
