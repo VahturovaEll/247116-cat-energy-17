@@ -81,6 +81,9 @@
     position: absolute;
     width: 24px;
     height: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7%;
     background-image: url("../img/icons/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
@@ -91,16 +94,6 @@
       width: 34px;
       right: 0;
     }
-  }
-
-  &--slim::after {
-    top: 3px;
-    right: 13px;
-  }
-
-  &--weight::after {
-    top: 2px;
-    right: 10px;
   }
 
   &:active {
@@ -195,16 +188,6 @@
     font-size: 20px;
     line-height: 20px;
     padding-right: 58px;
-
-    &--slim::after {
-      top: 5px;
-      left: 131px;
-    }
-
-    &--weight::after {
-      top: 5px;
-      left: 125px;
-    }
   }
 }
 
